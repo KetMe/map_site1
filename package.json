@@ -1,0 +1,12 @@
+{
+  "name": "maps-site-backup",
+  "version": "1.0.0",
+  "description": "Минималистичный черно-белый сайт с картами Верещагино (Пермский край) и Москвы. При клике на точки на картах воспроизводится аудио-семпл.",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}

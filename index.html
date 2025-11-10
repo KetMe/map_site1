@@ -1,29 +1,27 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Карты городов</title>
+    <title>SOUND MAP</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Карты городов</h1>
-        </header>
-
-        <main>
-            <section class="map-section">
-                <h2>Верещагино, Пермский край</h2>
-                <div id="map-vereshchagino" class="map"></div>
-            </section>
-
-            <section class="map-section">
-                <h2>Москва</h2>
-                <div id="map-moscow" class="map"></div>
-            </section>
-        </main>
+    <div class="page-container">
+        <h1 class="main-title">SOUND MAP</h1>
+        
+        <div class="maps-container">
+            <div class="map-wrapper">
+                <div id="map-vereshchagino" class="map-box"></div>
+                <p class="map-label">VERESCHAGINO</p>
+            </div>
+            
+            <div class="map-wrapper">
+                <div id="map-moscow" class="map-box"></div>
+                <p class="map-label">MOSCOW</p>
+            </div>
+        </div>
     </div>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>

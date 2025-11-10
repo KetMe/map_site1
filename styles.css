@@ -1,4 +1,4 @@
-/* Минималистичный черно-белый дизайн */
+/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -8,78 +8,93 @@
 html, body {
     width: 100%;
     height: 100%;
-    margin: 0;
-    padding: 0;
 }
 
 body {
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     background-color: #ffffff;
     color: #000000;
-    font-size: 16px;
-    line-height: 1.5;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    padding: 60px 20px;
 }
 
-.container {
-    max-width: 1200px;
+/* Page Container */
+.page-container {
+    width: 100%;
     margin: 0 auto;
-    padding: 80px 40px;
-}
-
-header {
     text-align: center;
-    margin-bottom: 100px;
-    padding-bottom: 40px;
-    border-bottom: 1px solid #000000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-h1 {
-    font-size: 28px;
+/* Main Title */
+.main-title {
+    font-size: 32px;
     font-weight: 400;
-    letter-spacing: 4px;
+    letter-spacing: 3px;
+    margin-bottom: 80px;
     text-transform: uppercase;
-    color: #000000;
-    margin: 0;
 }
 
-main {
+/* Maps Container */
+.maps-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: nowrap;
+}
+
+/* Map Wrapper */
+.map-wrapper {
     display: flex;
     flex-direction: column;
-    gap: 100px;
+    align-items: center;
+    gap: 20px;
+    flex-shrink: 0;
 }
 
-.map-section {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
+/* Map Box */
+.map-box {
+    width: 400px;
+    height: 400px;
+    min-width: 400px;
+    min-height: 400px;
+    max-width: 400px;
+    max-height: 400px;
+    border: 2px solid #000000;
+    background-color: #e0e0e0;
+    position: relative;
+    overflow: hidden !important;
+    flex-shrink: 0;
 }
 
-.map-section h2 {
-    font-size: 18px;
+#map-vereshchagino {
+    background-color: #f0f0f0;
+}
+
+#map-moscow {
+    background-color: #f0f0f0;
+}
+
+/* Map Label */
+.map-label {
+    font-size: 14px;
     font-weight: 400;
     letter-spacing: 2px;
-    text-align: center;
-    color: #000000;
-    margin: 0;
     text-transform: uppercase;
+    margin: 0;
 }
 
-.map {
-    width: 100%;
-    height: 600px;
-    border: 1px solid #000000;
-    background-color: #ffffff;
-}
-
-/* Черно-белая тема для Leaflet */
-.leaflet-container {
+/* Leaflet Map Styles */
+.map-box .leaflet-container {
     background-color: #ffffff;
     filter: grayscale(100%);
-    width: 100%;
-    height: 100%;
-    font-family: inherit;
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
 }
 
 .leaflet-tile-container img {
@@ -202,50 +217,54 @@ main {
     border-right-color: #000000 !important;
 }
 
-/* Адаптивность */
-@media (max-width: 768px) {
-    .container {
-        padding: 40px 20px;
-    }
-
-    header {
-        margin-bottom: 60px;
-        padding-bottom: 30px;
-    }
-
-    h1 {
-        font-size: 22px;
-        letter-spacing: 2px;
-    }
-
-    main {
-        gap: 60px;
-    }
-
-    .map-section {
-        gap: 30px;
-    }
-
-    .map-section h2 {
-        font-size: 16px;
-    }
-
-    .map {
-        height: 400px;
+/* Responsive Design */
+@media (max-width: 1000px) {
+    .maps-container {
+        flex-direction: column;
+        gap: 50px;
+        align-items: center;
     }
 }
 
-@media (max-width: 480px) {
-    .container {
-        padding: 30px 15px;
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 24px;
+        margin-bottom: 50px;
     }
-
-    h1 {
-        font-size: 18px;
-    }
-
-    .map {
+    
+    .map-box {
+        width: 350px;
         height: 350px;
+        min-width: 350px;
+        min-height: 350px;
+        max-width: 350px;
+        max-height: 350px;
+    }
+    
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 40px 15px;
+    }
+    
+    .main-title {
+        font-size: 20px;
+        margin-bottom: 40px;
+    }
+    
+    .map-box {
+        width: 300px;
+        height: 300px;
+        min-width: 300px;
+        min-height: 300px;
+        max-width: 300px;
+        max-height: 300px;
+    }
+    
+    
+    .map-label {
+        font-size: 12px;
     }
 }
 
