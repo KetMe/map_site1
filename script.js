@@ -1,5 +1,7 @@
 // Wait for DOM to load
 document.addEventListener('DOMContentLoaded', function() {
+    // Глобальная переменная для отслеживания текущего воспроизводимого аудио
+    let currentlyPlayingAudio = null;
     // Координаты центров карт
     const VERESHCHAGINO_CENTER = [58.0786, 54.6556]; // Верещагино, Пермский край
     const MOSCOW_CENTER = [55.7558, 37.6173]; // Москва
@@ -46,15 +48,35 @@ document.addEventListener('DOMContentLoaded', function() {
         // Создаем элемент audio
         const audio = new Audio(audioPath);
         
+        // Добавляем обработчик окончания воспроизведения
+        audio.addEventListener('ended', function() {
+            if (currentlyPlayingAudio === audio) {
+                currentlyPlayingAudio = null;
+            }
+        });
+        
         // Обработчик клика на маркер
         marker.on('click', function() {
-            // Останавливаем предыдущее воспроизведение, если оно было
-            audio.pause();
+            // Останавливаем текущее воспроизведение, если есть
+            if (currentlyPlayingAudio) {
+                currentlyPlayingAudio.pause();
+                currentlyPlayingAudio.currentTime = 0;
+            }
+            
+            // Если это тот же аудио файл, что уже играет, просто останавливаем его
+            if (currentlyPlayingAudio === audio) {
+                currentlyPlayingAudio = null;
+                return;
+            }
+            
+            // Воспроизводим новый аудио
             audio.currentTime = 0;
-            // Воспроизводим аудио
-            audio.play().catch(error => {
+            audio.play().then(() => {
+                currentlyPlayingAudio = audio;
+            }).catch(error => {
                 console.error('Ошибка воспроизведения аудио:', error);
                 alert('Не удалось воспроизвести аудио. Убедитесь, что файл существует в папке audio/');
+                currentlyPlayingAudio = null;
             });
         });
         
