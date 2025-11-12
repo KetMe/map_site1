@@ -93,18 +93,18 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Точки на карте Верещагино (5 точек)
-    createAudioMarker(mapVereshchagino, 58.0786, 54.6556, 'audio/lenina_vrsh.ogg', 'Улица Ленина');
-    createAudioMarker(mapVereshchagino, 58.0800, 54.6570, 'audio/leto_vrsh.ogg', 'Парк Лето');
-    createAudioMarker(mapVereshchagino, 58.0770, 54.6540, 'audio/park_vrsh.ogg', 'Центральный парк');
-    createAudioMarker(mapVereshchagino, 58.0820, 54.6580, 'audio/vokzal_vrsh.ogg', 'Железнодорожный вокзал');
-    createAudioMarker(mapVereshchagino, 58.0750, 54.6520, 'audio/ptichki_vrsh.ogg', 'Городской пруд');
+    createAudioMarker(mapVereshchagino, 58.0774, 54.6635, 'audio/lenina_vrsh.ogg', 'Улица Ленина');
+    createAudioMarker(mapVereshchagino, 58.0771, 54.6607, 'audio/leto_vrsh.ogg', 'ТЦ Лето');
+    createAudioMarker(mapVereshchagino, 58.0797, 54.6786, 'audio/park_vrsh.ogg', 'Центральный парк');
+    createAudioMarker(mapVereshchagino, 58.0779, 54.6537, 'audio/vokzal_vrsh.ogg', 'Железнодорожный вокзал');
+    createAudioMarker(mapVereshchagino, 58.0754, 54.6513, 'audio/ptichki_vrsh.ogg', 'У проезжей части');
 
     // Точки на карте Москвы (5 точек)
-    createAudioMarker(mapMoscow, 55.7558, 37.6173, 'audio/park_msk.WAV', 'Парк Горького');
-    createAudioMarker(mapMoscow, 55.7510, 37.6180, 'audio/red_squ.WAV', 'Красная площадь');
-    createAudioMarker(mapMoscow, 55.7600, 37.6200, 'audio/shosse.WAV', 'Кутузовский проспект');
-    createAudioMarker(mapMoscow, 55.7520, 37.6150, 'audio/tc_kursk_msk.WAV', 'Курский вокзал');
-    createAudioMarker(mapMoscow, 55.7580, 37.6220, 'audio/vokzal_msk.WAV', 'Казанский вокзал');
+    createAudioMarker(mapMoscow, 55.7366, 37.6064, 'audio/park_msk.WAV', 'Парк Музеон');
+    createAudioMarker(mapMoscow, 55.7534, 37.6208, 'audio/red_squ.WAV', 'Красная площадь');
+    createAudioMarker(mapMoscow, 55.8121, 37.8189, 'audio/shosse.WAV', 'Щелковское шоссе');
+    createAudioMarker(mapMoscow, 55.7572, 37.6588, 'audio/tc_kursk_msk.WAV', 'ТЦ Авеню');
+    createAudioMarker(mapMoscow, 55.7578, 37.6602, 'audio/vokzal_msk.WAV', 'Курский вокзал');
 
     // Обработка ошибок загрузки карт
     mapVereshchagino.whenReady(function() {
