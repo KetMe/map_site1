@@ -70,47 +70,19 @@ document.addEventListener('DOMContentLoaded', function() {
         return marker;
     }
 
-    // Точки на карте Верещагино
-    createAudioMarker(
-        mapVereshchagino,
-        58.0786,
-        54.6556,
-        'audio/vereshchagino_sample1.ogg',
-        'Точка 1'
-    );
+    // Точки на карте Верещагино (5 точек)
+    createAudioMarker(mapVereshchagino, 58.0786, 54.6556, 'audio/lenina_vrsh.ogg', 'Улица Ленина');
+    createAudioMarker(mapVereshchagino, 58.0800, 54.6570, 'audio/leto_vrsh.ogg', 'Парк Лето');
+    createAudioMarker(mapVereshchagino, 58.0770, 54.6540, 'audio/park_vrsh.ogg', 'Центральный парк');
+    createAudioMarker(mapVereshchagino, 58.0820, 54.6580, 'audio/vokzal_vrsh.ogg', 'Железнодорожный вокзал');
+    createAudioMarker(mapVereshchagino, 58.0750, 54.6520, 'audio/ptichki_vrsh.ogg', 'Городской пруд');
 
-    createAudioMarker(
-        mapVereshchagino,
-        58.0850,
-        54.6600,
-        'audio/vereshchagino_sample2.ogg',
-        'Точка 2'
-    );
-
-    // Точки на карте Москвы
-    createAudioMarker(
-        mapMoscow,
-        55.7558,
-        37.6173,
-        'audio/moscow_sample1.ogg',
-        'Точка 1'
-    );
-
-    createAudioMarker(
-        mapMoscow,
-        55.7510,
-        37.6180,
-        'audio/moscow_sample2.ogg',
-        'Точка 2'
-    );
-
-    createAudioMarker(
-        mapMoscow,
-        55.7600,
-        37.6200,
-        'audio/moscow_sample3.ogg',
-        'Точка 3'
-    );
+    // Точки на карте Москвы (5 точек)
+    createAudioMarker(mapMoscow, 55.7558, 37.6173, 'audio/park_msk.WAV', 'Парк Горького');
+    createAudioMarker(mapMoscow, 55.7510, 37.6180, 'audio/red_squ.WAV', 'Красная площадь');
+    createAudioMarker(mapMoscow, 55.7600, 37.6200, 'audio/shosse.WAV', 'Кутузовский проспект');
+    createAudioMarker(mapMoscow, 55.7520, 37.6150, 'audio/tc_kursk_msk.WAV', 'Курский вокзал');
+    createAudioMarker(mapMoscow, 55.7580, 37.6220, 'audio/vokzal_msk.WAV', 'Казанский вокзал');
 
     // Обработка ошибок загрузки карт
     mapVereshchagino.whenReady(function() {
