@@ -92,18 +92,19 @@ document.addEventListener('DOMContentLoaded', function() {
         return marker;
     }
 
-    // Точки на карте Верещагино (5 точек)
+    // Точки на карте Верещагино (6 точек)
     createAudioMarker(mapVereshchagino, 58.0774, 54.6635, 'audio/lenina_vrsh.ogg', 'Улица Ленина');
     createAudioMarker(mapVereshchagino, 58.0771, 54.6607, 'audio/leto_vrsh.ogg', 'ТЦ Лето');
     createAudioMarker(mapVereshchagino, 58.0797, 54.6786, 'audio/park_vrsh.ogg', 'Центральный парк');
     createAudioMarker(mapVereshchagino, 58.0779, 54.6537, 'audio/vokzal_vrsh.ogg', 'Железнодорожный вокзал');
     createAudioMarker(mapVereshchagino, 58.0754, 54.6513, 'audio/ptichki_vrsh.ogg', 'У проезжей части');
+    createAudioMarker(mapVereshchagino, 58.080906, 54.689273, 'audio/dom_N3V68jFS.wav', 'У леса');
 
     // Точки на карте Москвы (5 точек)
     createAudioMarker(mapMoscow, 55.7366, 37.6064, 'audio/park_msk.WAV', 'Парк Музеон');
     createAudioMarker(mapMoscow, 55.7534, 37.6208, 'audio/red_squ.WAV', 'Красная площадь');
     createAudioMarker(mapMoscow, 55.8121, 37.8189, 'audio/shosse.WAV', 'Щелковское шоссе');
-    createAudioMarker(mapMoscow, 55.7572, 37.6588, 'audio/tc_kursk_msk.WAV', 'ТЦ Авеню');
+    createAudioMarker(mapMoscow, 55.7572, 37.6588, 'audio/tc_kursk_msk.WAV', 'ТЦ Атриум');
     createAudioMarker(mapMoscow, 55.7578, 37.6602, 'audio/vokzal_msk.WAV', 'Курский вокзал');
 
     // Обработка ошибок загрузки карт
